@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
             Destroy(trigger.gameObject);
         }
 
-    }
+    }   
 
 
     void AddScore(int value)
