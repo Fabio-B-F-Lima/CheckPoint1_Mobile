@@ -67,29 +67,42 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider trigger)
+    private void OnTriggerEnter(Collider other)
     {
-        if (trigger.gameObject.CompareTag("Diamond"))
+        if (other.gameObject.CompareTag("Diamond"))
         {
             AddScore(100);
             AddTime(2.0f);
-            Destroy(trigger.gameObject);
+            Destroy(other.gameObject);
 
         }
-        else if (trigger.gameObject.CompareTag("Emerald"))
+        else if (other.gameObject.CompareTag("Emerald"))
         {
             AddScore(250);
             AddTime(5.0f);
-            Destroy(trigger.gameObject);
+            Destroy(other.gameObject);
         }
-        else if (trigger.gameObject.CompareTag("Ametist"))
+        else if (other.gameObject.CompareTag("Ametist"))
         {
             AddScore(500);
             AddTime(8.0f);
-            Destroy(trigger.gameObject);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("Spike"))
+        {
+            AddScore(-500);
+            AddTime(-5.0f);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("KABUM"))
+        {
+            AddScore(-1000);
+            AddTime(-10.0f);
+            Destroy(other.gameObject);
         }
 
-    }   
+
+    }
 
 
     void AddScore(int value)
