@@ -7,10 +7,11 @@ public class PlayerControls : MonoBehaviour
     private Vector2 touchEnd;
 
     Player player;
-
+    
     private void Awake()
     {
         player = GetComponent<Player>();
+        
     }
 
     private void Update()
@@ -40,10 +41,8 @@ public class PlayerControls : MonoBehaviour
             Vector2 touchValue = (touchEnd - touchStart);
 
 
-
             if (Mathf.Abs(touchValue.x) > Mathf.Abs(touchValue.y))
             {
-                // MOVIMENTO HORIZONTAL  (ESQUERDA OU DIREITA)
 
                 if (touchStart.x < touchEnd.x)
                 {
@@ -53,11 +52,9 @@ public class PlayerControls : MonoBehaviour
                 {
                     player.ChangeLaneX(-3);
                 }
-
             }
             else
             {
-                // VERTICAL
                 if (touchStart.y < touchEnd.y)
                 {
                     player.ChangeLaneZ(3);
@@ -67,7 +64,6 @@ public class PlayerControls : MonoBehaviour
                     player.ChangeLaneZ(-3);
                 }
             }
-
         }
     }
 }

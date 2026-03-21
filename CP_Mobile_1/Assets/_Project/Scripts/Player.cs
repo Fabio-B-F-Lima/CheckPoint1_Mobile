@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
     private Vector3 currentPosition;
 
     [Header("Score Settings")]
-    private int score = 0;
-    private float time = 10f;
+    public int score = 0;
+    public float time = 10f;
     private float timeCount;
 
     void Start()
@@ -75,6 +75,18 @@ public class Player : MonoBehaviour
             AddTime(2.0f);
             Destroy(trigger.gameObject);
 
+        }
+        else if (trigger.gameObject.CompareTag("Emerald"))
+        {
+            AddScore(250);
+            AddTime(5.0f);
+            Destroy(trigger.gameObject);
+        }
+        else if (trigger.gameObject.CompareTag("Ametist"))
+        {
+            AddScore(500);
+            AddTime(8.0f);
+            Destroy(trigger.gameObject);
         }
 
     }
