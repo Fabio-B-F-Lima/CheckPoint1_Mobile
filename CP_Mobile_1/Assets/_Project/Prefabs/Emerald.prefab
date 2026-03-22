@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7983d3a17db3dbc4d99219c0e4b6dd03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7983d3a17db3dbc4d99219c0e4b6dd03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7983d3a17db3dbc4d99219c0e4b6dd03, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7983d3a17db3dbc4d99219c0e4b6dd03, type: 3}
       propertyPath: m_Name
-      value: emerald_1
+      value: Emerald
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7983d3a17db3dbc4d99219c0e4b6dd03, type: 3}
       propertyPath: m_TagString

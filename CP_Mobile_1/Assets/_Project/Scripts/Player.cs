@@ -71,21 +71,21 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Diamond"))
         {
-            AddScore(100);
-            AddTime(2.0f);
+            AddScore(250);
+            AddTime(5.0f);
             Destroy(other.gameObject);
 
         }
         else if (other.gameObject.CompareTag("Emerald"))
         {
-            AddScore(250);
-            AddTime(5.0f);
+            AddScore(450);
+            AddTime(8.0f);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Ametist"))
         {
-            AddScore(500);
-            AddTime(8.0f);
+            AddScore(700);
+            AddTime(12.0f);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Spike"))

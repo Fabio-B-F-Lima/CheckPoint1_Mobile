@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c472b606e5f18d46ac6e651c22ede11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c472b606e5f18d46ac6e651c22ede11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103,6 +103,8 @@ MonoBehaviour:
   currentLanex: 0
   currentLanez: 0
   laneLimit: 6
+  score: 0
+  time: 10
 --- !u!114 &3077958809344148599
 MonoBehaviour:
   m_ObjectHideFlags: 0
