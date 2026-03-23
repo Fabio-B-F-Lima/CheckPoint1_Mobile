@@ -29,8 +29,6 @@ public class Player : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, currentPosition, stepSpeed * Time.deltaTime);
 
         TimeCount();
-        print(score);
-        print(time);
     }
     public void ChangeLaneX(int direction)
     {
@@ -38,6 +36,7 @@ public class Player : MonoBehaviour
         {
             if (currentLanex > -laneLimit)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 currentLanex += direction;
             }
         }
@@ -45,6 +44,7 @@ public class Player : MonoBehaviour
         {
             if (currentLanex < laneLimit)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
                 currentLanex += direction;
             }
         }
@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
         {
             if (currentLanez > -laneLimit)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90, transform.eulerAngles.z);
                 currentLanez += direction;
             }
         }
@@ -62,6 +63,7 @@ public class Player : MonoBehaviour
         {
             if (currentLanez < laneLimit)
             {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 90, transform.eulerAngles.z);
                 currentLanez += direction;
             }
         }
@@ -72,32 +74,32 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Diamond"))
         {
             AddScore(250);
-            AddTime(5.0f);
+            AddTime(3.0f);
             Destroy(other.gameObject);
 
         }
         else if (other.gameObject.CompareTag("Emerald"))
         {
             AddScore(450);
-            AddTime(8.0f);
+            AddTime(5.0f);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Ametist"))
         {
             AddScore(700);
-            AddTime(12.0f);
+            AddTime(8.0f);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Spike"))
         {
             AddScore(-500);
-            AddTime(-5.0f);
+            AddTime(-10.0f);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("KABUM"))
         {
             AddScore(-1000);
-            AddTime(-10.0f);
+            AddTime(-20.0f);
             Destroy(other.gameObject);
         }
 

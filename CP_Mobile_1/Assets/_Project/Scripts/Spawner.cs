@@ -49,13 +49,13 @@ public class Spawner : MonoBehaviour
         }
 
         GameObject obj = Instantiate(item, spawnsPositions[spawnIndex].position, Quaternion.identity);
-        Destroy(obj, 5f);
+        Destroy(obj, 2f);
     }
 
     IEnumerator SpawnItem()
     {
         Spawn();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
         StartCoroutine(SpawnItem());
     }
 

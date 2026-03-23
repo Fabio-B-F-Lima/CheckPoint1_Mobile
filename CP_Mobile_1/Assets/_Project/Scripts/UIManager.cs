@@ -39,7 +39,6 @@ public class UIManager : MonoBehaviour
 
     private void ResetGame()
     {
-        Debug.Log("BOTÃO CLICADO");
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("GameScene");
     }

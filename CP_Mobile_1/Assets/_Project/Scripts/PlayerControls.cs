@@ -47,6 +47,7 @@ public class PlayerControls : MonoBehaviour
                 if (touchStart.x < touchEnd.x)
                 {
                     player.ChangeLaneX(3);
+                   
                 }
                 else
                 {
